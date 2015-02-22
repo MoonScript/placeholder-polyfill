@@ -1,0 +1,32 @@
+/* position the label directly on top of the input */
+.placeholder_wrapper {
+  position: relative;
+}
+label.placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: text;
+}
+ 
+/* hide the label in modern browsers or when text has been entered */
+.inputplaceholder label.placeholder,
+input[placeholder].placeholder-state-hidden + label.placeholder,
+textarea[placeholder].placeholder-state-hidden + label.placeholder {
+  display: none;
+}
+ 
+/* input text color */
+input[placeholder], textarea[placeholder] {color: #404040;}
+ 
+/* normal placeholder text color, slightly lighter than input text color */
+input[placeholder]::-webkit-input-placeholder, textarea[placeholder]::-webkit-input-placeholder {color: #878787;}
+input[placeholder]:-moz-placeholder, textarea[placeholder]:-moz-placeholder {color: #878787;}
+input[placeholder]:-ms-input-placeholder, textarea[placeholder]:-ms-input-placeholder {color: #878787;}
+input[placeholder] + label.placeholder, textarea[placeholder] + label.placeholder {color: #878787;}
+ 
+/* focused placeholder text color, even lighter than normal placeholder text color */
+input[placeholder]:focus::-webkit-input-placeholder, textarea[placeholder]:focus::-webkit-input-placeholder {color: #AEAEAE;}
+input[placeholder]:focus:-moz-placeholder, textarea[placeholder]:focus:-moz-placeholder {color: #AEAEAE;}
+input[placeholder]:focus:-ms-input-placeholder, textarea[placeholder]:focus:-ms-input-placeholder {color: #AEAEAE;}
+input[placeholder]:focus + label.placeholder, textarea[placeholder]:focus + label.placeholder {color: #AEAEAE;}

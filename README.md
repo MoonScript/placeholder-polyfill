@@ -14,6 +14,7 @@ When the `<input>` or `<textarea>` is pre-populated with a value from the server
 
 ## Required CSS
 Defined in [style.css](style.css).
+> The padding/positioning of the `<label>` will have to be adjust so that its text **exactly** overlaps with the spot where text would be entered into the text field.
 
 ## JavaScript
 Required code in [placeholder.js](placeholder.js).
